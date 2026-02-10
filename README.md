@@ -1,6 +1,12 @@
-# CrewAI IIS Rollback POC
+# IIS Rollback Tool
 
-A production-ready Proof of Concept for IIS (Internet Information Services) rollback operations on Windows Server, executed remotely via SSH using CrewAI agents.
+**Production-ready IIS Rollback Tool via SSH on Windows Server**
+
+Built with CrewAI for intelligent orchestration of rollback operations.
+
+---
+
+**Repository:** https://github.com/betoasistentepersonal/iis-rollback-tool
 
 ## Overview
 
@@ -65,8 +71,8 @@ crewai_iis_rollback/
 
 ```bash
 # Clone the repository
-git clone https://github.com/betoasistentepersonal/crewai-iis-rollback.git
-cd crewai-iis-rollback
+git clone https://github.com/betoasistentepersonal/iis-rollback-tool.git
+cd iis-rollback-tool
 
 # Create virtual environment
 python -m venv venv
