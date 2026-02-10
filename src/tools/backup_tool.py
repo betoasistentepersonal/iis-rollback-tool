@@ -190,9 +190,9 @@ class BackupManager:
             BackupInfo object with ZIP backup details
         """
         command = (
-            f'powershell -Command "'
+            f'powershell -Command \"'
             f'$zipFile = Get-ChildItem -Path \\"{backup_path}\\" -Filter *.zip | Select-Object -First 1; '
-            f'Write-Host \\"$($zipFile.Name)|$($zipFile.LastWriteTimeUtc.ToString(\'yyyy-MM-dd HH:mm:ss\\'))\\""'
+            f'Write-Host \\"$($zipFile.Name)|$($zipFile.LastWriteTimeUtc.ToString(\\"yyyy-MM-dd HH:mm:ss\\"))\\"\"'
         )
         
         result = self.ssh.execute_command(command, powershell=True)
@@ -282,7 +282,7 @@ class BackupManager:
         # Create parent Temp folder if it doesn't exist
         command = (
             f'powershell -Command "'
-            f'if (!(Test-Path \\"{base_path}\\")) {{ New-Item -Path \\"{basePath}\\" -ItemType Directory -Force }}; '
+            f'if (!(Test-Path \\"{base_path}\\")) {{ New-Item -Path \\"{base_path}\\" -ItemType Directory -Force }}; '
             f'New-Item -Path \\"{temp_folder}\\" -ItemType Directory -Force | Out-Null; '
             f'Write-Host \\"Created\\""'
         )

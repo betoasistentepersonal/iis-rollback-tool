@@ -30,15 +30,15 @@ class SSHConfig:
     
     Attributes:
         host: IP address or hostname of the Windows Server
-        port: SSH port number (default: 22)
         username: SSH username for authentication
+        port: SSH port number (default: 22)
         password: SSH password for authentication
         key_path: Optional path to SSH private key file
         timeout: Connection timeout in seconds
     """
     host: str
-    port: int = 22
     username: str
+    port: int = 22
     password: Optional[str] = None
     key_path: Optional[str] = None
     timeout: int = 30

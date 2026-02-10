@@ -35,10 +35,10 @@ class EmailConfig:
         sender_password: Sender app password or password
         use_tls: Whether to use TLS encryption
     """
-    smtp_server: str = "smtp.gmail.com"
-    smtp_port: int = 587
     sender_email: str
     sender_password: str
+    smtp_server: str = "smtp.gmail.com"
+    smtp_port: int = 587
     use_tls: bool = True
 
 
